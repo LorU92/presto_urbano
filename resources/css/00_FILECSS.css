@@ -1,0 +1,466 @@
+:root{
+    --pink: rgb(253, 191, 191);
+    --black: rgb(23, 23, 23);
+    --red: rgb(255, 54, 54);
+}
+
+a{
+    text-decoration: none;
+}
+
+/* nav-bar */
+.navbar-custom{
+    z-index: 1;
+}
+
+.collapse-custom{
+    display: flex;
+    justify-content: end;
+}
+
+.navbar-brand{
+    height: 25px;
+    width: 25px;
+    background-color: var(--pink);
+    border-radius: 50%;
+}
+
+.nav-link{
+    font-size: 12px;
+    font-weight: 500;
+    width: 120px;
+}
+
+.navbar-icon-custom{
+    height: 20px;
+    width: 20px;
+    background-color: none;
+    border-radius: 50%;
+    border: 2px solid var(--pink);
+}
+
+.button-collapse-custom{
+    border: none;
+}
+
+.navbar-icon-custom:active{
+    background-color: var(--pink);
+    border: none;
+}
+
+.button-collapse-custom:not(.collapsed){
+    box-shadow: none;
+}
+
+.button-collapse-custom:focus{
+    box-shadow: none;
+}
+
+.nav-link:hover{
+    color: var(--pink);
+}
+
+/* header */
+.header-container{
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.title{
+    white-space: nowrap;
+}
+
+.title-custom{
+    font-family: "Host Grotesk", sans-serif;
+    font-weight: 600;
+    color: var(--red);
+    font-size: 30vh;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.sottotitolo-custom{
+    font-family: "Google Sans Flex", sans-serif;
+    font-weight: 400;
+    color: var(--black);
+    font-size: 2.5vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.sottotitolo-custom-mostre{
+    font-family: "Google Sans Flex", sans-serif;
+    font-weight: 400;
+    color: var(--black);
+    font-size: 2.5vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.imagetop-box{
+    height: 100vh;
+    width: 100%;
+    padding: 35px 0px 0px 0px;
+}
+
+.imagetop{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.pinkheader-box{
+    background-color: var(--pink);
+    min-width: 5vh;
+    padding: 10px 0px 10px 0px;
+}
+
+@media screen and (max-width: 1100px){
+    .title-custom{
+        font-size: 15vh;
+    }
+    .sottotitolo-custom{
+        display: none;
+    }
+    .imagetop-box{
+        padding-top: 10px;
+        height: 30vh;
+    }
+    .pinkheader-box{
+        padding: 20px 0px 20px 0px;
+    }
+}
+ 
+/* pinkheader */
+.whowas-custom{
+    font-family: "Libre Bodoni", serif;
+    font-size: 7vw;
+    font-weight: 800;
+    color: var(--red);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: end;
+}
+
+.scopri-custom{
+    font-family: "Host Grotesk", sans-serif;
+    font-size: 1.5vw;
+    font-weight: 400;
+    color: var(--red);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.about-custom{
+    font-family: "Google Sans Flex", sans-serif;
+    font-size: 7vw;
+    font-weight: 600;
+    color: var(--red);
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    text-align: center;
+}
+
+.selected-custom{
+    font-family: "Google Sans Flex", sans-serif;
+    font-size: 7vw;
+    font-weight: 400;
+    color: var(--red);
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    text-align: center;
+}
+
+.artworks-custom{
+    font-family: "Libre Bodoni", serif;
+    font-size: 7vw;
+    font-weight: 800;
+    color: var(--red);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: start;
+}
+
+.blog-custom{
+    font-family: "Libre Bodoni", serif;
+    font-size: 7vw;
+    font-weight: 900;
+    color: var(--red);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: end;
+}
+
+.time-custom{
+    font-family: "Google Sans Flex", sans-serif;
+    font-size: 7vw;
+    font-weight: 600;
+    color: var(--red);
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    text-align: center;
+}
+
+/* News */
+.evento-custom{
+    font-family: "Google Sans Flex", sans-serif;
+    font-size: 4vw;
+    font-weight: 600;
+    color: var(--black);
+    padding: 40px 0px 0px 20px;
+}
+
+.linea{
+    border: none;
+    height: 2px;
+    background-color: var(--black);
+    width: 100%;
+    margin: 2% 0% 2% 0%;
+}
+
+.eventotitle-custom{
+    padding: 2% 0% 2% 4%;
+}
+.titleevento{
+    font-family: "Google Sans Flex", sans-serif;
+    font-size: 3vw;
+    font-weight: 600;
+    color: var(--black);
+}
+
+.sottotitleevento{
+    font-family: "Google Sans Flex", sans-serif;
+    font-size: 1vw;
+    font-weight: 400;
+    color: var(--black);
+}
+
+.eventotext-custom{
+    font-family: "Google Sans Flex", sans-serif;
+    font-size: 1vw;
+    font-weight: 400;
+    color: var(--black);
+    padding: 0% 4% 0% 8%;
+    display: flex;
+    align-items: center;
+}
+
+.button-news{
+    background-color: var(--pink);
+    opacity: 20%;
+    border: none;
+    border-radius: 20px;
+    width: 20%;
+    height: 20%;  
+}
+
+h4{
+    font-family: "Google Sans Flex", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: white;
+    margin: 0%;
+}
+
+.button-news:hover{
+    opacity: 100%;
+}
+
+@media screen and (max-width: 1100px){
+    .whowas-custom{
+        font-size: 5vw;
+    }
+    .scopri-custom{
+        display: none;
+    }
+    .whowas-custom, .about-custom, .selected-custom, .artworks-custom, .blog-custom, .time-custom{
+        padding:0px 80px 0px 70px;
+        margin: 0px;
+    }
+    .evento-custom{
+        font-size: 6vw;
+        padding: 20px 0px 0px 0px;
+    }
+    .titleevento{
+        font-size: 5vw;
+    }
+    .sottotitleevento{
+        font-size: 2vw;
+    }
+    .eventotext-custom{
+        font-size: 2vw;
+        padding: 0% 4% 0% 4%;
+    }
+    h4{
+        font-family: "Google Sans Flex", sans-serif;
+        font-size: 5px;
+        font-weight: 400;
+        color: var(--black);
+        margin: 0%;
+    }
+}
+
+/* NUMERI INCREMENTALI */
+.title-number{
+    font-family: "Google Sans Flex", sans-serif;
+    font-size: 2vw;
+    font-weight: 600;
+    color: var(--black);
+}
+
+.text-number{
+    font-family: "Google Sans Flex", sans-serif;
+    font-size: 1vw;
+    font-weight: 400;
+    color: var(--black);
+    display: flex;
+    align-items: center;
+    margin: 0px;;
+}
+
+.numeri{
+    padding: 0px 20px 0px 0px;
+    font-family: "Libre Bodoni", serif;
+    font-size: 4vw;
+    font-weight: 400;
+    color: var(--red);
+}
+
+@media screen and (max-width: 1100px){
+    .title-number{
+        font-size: 4vw;
+        padding: 15px 0px 0px 15px;
+    }
+    .text-number{
+        font-size: 2vw;
+    }
+    .numeri{
+        font-size: 5vw;
+        padding: 0px 5px 0px 0px;
+    }
+}
+
+/* FOOTER */
+.footer-row{
+    margin: 100px 0px 0px 0px;
+    background-color: var(--pink);
+    padding: 5% 10% 6% 10%;
+}
+
+.footer-title{
+    font-family: "Host Grotesk", sans-serif;
+    font-size: 6vw;
+    font-weight: 600;
+    color: var(--red);
+    display: flex; 
+    align-items: center;  
+    flex-direction: column;
+    line-height: 1;
+}
+
+.footer-text{
+    font-family: "Host Grotesk", sans-serif;
+    font-size: 1vw;
+    font-weight: 400;
+    color: var(--red);
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 2% 0% 0% 0%;
+}
+
+@media screen and (max-width: 1100px){
+    .footer-row{
+        margin: 30px 0px 0px 0px;
+        padding: 3% 20% 5% 20%;
+    }
+    .footer-text{
+        font-size: 1.8vw;
+        padding: 7% 0% 0% 0%;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+
+    }
+}
+
+/* CARD */
+.cardcustom{
+    width:300px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.img-card{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 100%;
+}
+
+.accordion-item{
+    width: 80%;
+    margin: 0% auto 0% auto;
+}
+
+/* ABOUT */
+.button-about{
+    background-color: var(--pink);
+    opacity: 20%;
+    border: none;
+    border-radius: 20px;
+    width: 50%;
+    height: 15%;  
+    margin: 0% 0% 5% 0%;
+}
+
+.button-about:hover{
+    opacity: 100%;
+}
+
+@media screen and (max-width: 1100px){
+    .textscopriabout{
+        font-size: 3vw;
+    }
+}
+
+/* CONTATTACI */
+
+.form-label-custom{
+    font-family: "Host Grotesk", sans-serif;
+}
+
+.btn-button-custom{
+    background-color: var(--pink);
+    color: white;
+    font-weight: 500;
+}
+
+.form-custom{
+    background-color: whitesmoke;
+}
+
+.form-control-custom{
+    border: none;
+}
+
+.btn-button-custom:hover{
+    background-color: white;
+    color: var(--pink);
+}
+

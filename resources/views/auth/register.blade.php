@@ -1,0 +1,56 @@
+<x-layout>
+    
+    <!-- Login titolo -->
+    <section class="container-fluid">
+        <h1 class="evento-custom">REGISTRATI</h1>
+        <div class="linea"></div>
+        <!-- REGISTRATI -->
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-4">
+                
+                {{-- FORM --}}
+                {{-- ELEMENTI LATO BACKEND DI UN FORM:
+                NEGLI INPUT
+                1. ATTRIBUTO NAME - ETICHETTA
+                NEL TAG DI APERTURA DEL FORM
+                2. ATTRIBUTO METHOD - VALORE GET O POST 
+                3. ATTRIBUTO ACTION - VALORE ROTTA DELLA FUNZIONE CHE DEVE SCATTARE NEL MOMENTO IN CUI IL CLIENTE CLICCA IL BOTTONE / SI RICHIAMA ATTRAVERSO LA ROTTA POST. NON RICHIAMI DIRETTAMENTE LA LOGICA (CONTROLLER) MA LA ROTTA.
+                4. ATTIBUTO ENCTYPE - CONSENTE PASSAGGIO DI DATI COMPLESSI COME I FILE
+                csrf (cross site request forgery--}}
+                
+                <form class="p-5 my-5 form-custom rounded" 
+                method="POST" 
+                action="{{route('register')}}">
+                @csrf
+                <div class="form-group">
+                    <label for="name">Nome Utente</label>
+                    <input type="text" class="form-control" id="name" name="name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" name="email">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" name="password">
+                </div>
+                <div class="form-group">
+                    <label for="password_confirmation">Confirm Password</label>
+                    <input type="password" class="form-control" id="password_confirmation" name="password_confirmation">
+                </div>
+                <div class="d-flex justify-content-center">
+                    <div class="col-6">
+                        <button type="submit" class="btn btn-button-custom form-label-custom">REGISTRATI</button>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <p class="btn btn-link">Hai già un account? 
+                        <a href="{{ route('login') }}">Accedi</a>
+                    </p>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+    
+</x-layout>
