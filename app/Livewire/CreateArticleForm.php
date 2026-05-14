@@ -75,6 +75,7 @@ class CreateArticleForm extends Component
         $this->title = '';
         $this->description = '';
         $this->price = '';
+        $this->category = '';
     }
 
     public function render()

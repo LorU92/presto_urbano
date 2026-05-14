@@ -23,4 +23,12 @@ class Article extends Model
     {
     return $this->belongsTo(Category::class);
     }
+
+    // RELAZIONE ONE TO MANY
+    // funzione di relazione tra tabelle
+    // più articoli appartengono ad un user
+    public function user(): BelongsTo
+    {
+    return $this->belongsTo(User::class);
+    }
 }

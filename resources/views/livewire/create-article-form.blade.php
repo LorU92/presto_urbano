@@ -50,6 +50,15 @@
                             
                     </div>
                     <div class="mb-3">
+                        <select wire:model="category" id="category" class="form-control form-control-custom">
+                            <option label>SELEZIONA CATEGORIA</option>
+                            @foreach ($categories as $category)
+                                <option class="text-uppercase" value="{{$category->id}}">{{$category->name}}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                    
+                    <div class="mb-3">
                         <label for="img" class="form-label">IMMAGINE</label>
                         <input type="file" class="form-control" id="img" wire:model.debounce.150ms="img">
                     </div>

@@ -12,6 +12,22 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('index.article')}}">ANNUNCI</a>
                     </li>
+                    {{-- dropdown categorie --}}
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            CATEGORIE
+                        </a>
+                        <ul class="dropdown-menu border-0 bg-transparent">
+                            @foreach ($categories as $category)
+                            <li>
+                                <a class="dropdown-item nav-link text-center text-uppercase" href="{{route('byCategory', ['category' => $category])}}">{{$category->name}}</a>
+                            </li>
+                                @if (!$loop->last)
+                                    <li><hr class="dropdown-divider"></li>
+                                @endif
+                            @endforeach
+                        </ul>
+                    </li>                 
                     @auth
                     {{--far comparire un tasto in cui si visualizza il nome dell'utente loggato --}}
                     {{--  mb_strtoupper() - TESTO IN MAIUSCOLO --}}
@@ -26,7 +42,7 @@
                         <a class="nav-link" href="#">CONTATTACI</a>
                     </li>                    
                     @guest
-
+                    
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('register')}}">REGISTRATI</a>
                     </li>
@@ -41,11 +57,11 @@
                         <form 
                         action="{{route('logout')}}"
                         method="POST">
-                            <button type="submit" class="nav-link" >LOGOUT</button>
-                        </form>
-                    </li>
-                    @endauth
-                </ul>
-            </div>
+                        <button type="submit" class="nav-link" >LOGOUT</button>
+                    </form>
+                </li>
+                @endauth
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav>
