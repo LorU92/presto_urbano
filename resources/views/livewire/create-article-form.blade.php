@@ -58,10 +58,6 @@
                         </select>
                     </div>
                     
-                    <div class="mb-3">
-                        <label for="img" class="form-label">IMMAGINE</label>
-                        <input type="file" class="form-control" id="img" wire:model.debounce.150ms="img">
-                    </div>
                     <div class="d-flex justify-content-center">
                         <button type="submit" class="btn btn-button-custom form-label-custom">CARICA ANNUNCIO</button>
                     </div>

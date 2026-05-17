@@ -7,9 +7,23 @@
         <div class="row">
 
             {{-- Messaggio di successo creazione annuncio --}}
-            @if (session('succesMessage'))
+            @if (session('successCreateMessage'))
             <div class="alert alert-success">
-                {{ session('succesMessage') }}
+                {{ session('successCreateMessage') }}
+            </div>
+            @endif
+
+            {{-- Messaggio di errore accesso dashboard --}}
+            @if (session('errorMessage'))
+            <div class="alert alert-success">
+                {{ session('errorMessage') }}
+            </div>
+            @endif
+
+            {{-- Messaggio di successo invio mail per diventare revisore --}}
+            @if (session('successMailMessage'))
+            <div class="alert alert-success">
+                {{ session('successMailMessage') }}
             </div>
             @endif
             

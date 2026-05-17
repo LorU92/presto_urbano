@@ -11,6 +11,13 @@
                     <p class="email m-0 d-flex align-items-center"><i class="fa-regular fa-envelope fa-2x"></i>ri-uso@gmail.com</p>
                     <p class="telefono m-0 d-flex align-items-center"><i class="fa-solid fa-phone fa-2x"></i>+39 329 4566789</p>
                 </div>
+                <div class="footer-text">
+                    <p class="contact m-0">VUOI DIVENTARE UN REVISORE?</p>
+                    <p class="contact m-0">FAI RICHIESTA CLICCANDO IL BOTTONE SOTTOSTANTE</p>
+                    <button class="button-news">
+                        <a href="{{route('become.revisor')}}"><h4>DIVENTA REVISORE<h4></a>
+                    </button>
+                </div>
             </div>
         </div>
      </footer> 

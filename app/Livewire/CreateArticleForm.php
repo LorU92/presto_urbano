@@ -29,7 +29,6 @@ class CreateArticleForm extends Component
     #[Validate('required', message: 'Il prezzo è obbligatorio')]
     public $price;
 
-    public $img;
     public $category;
     public $article;
     
@@ -43,18 +42,10 @@ class CreateArticleForm extends Component
         // MASS ASSIGNMENT
         // permette di creare un nuovo articolo e salvare i dati nel database in un'unica riga di codice, specificando i campi da salvare e i valori corrispondenti recuperati dalle proprietà del componente da assegnare ai dati del model
 
-        // Se l'utente carica l'immagine salva in storage, altrimenti prendi l'immagine di default presente in public->img
-        if ($this->img) {
-            $img = $this->img->store('articles', 'public');
-        } else {
-            $img = 'default';
-        }
-
-        Article::create([
+          Article::create([
             'title' => $this->title,
             'description' => $this->description,
             'price' => $this->price,
-            'img' => $img,
             'category_id' => $this->category,
             'user_id' => Auth::user()->id
         ]);
@@ -64,7 +55,7 @@ class CreateArticleForm extends Component
         $this->clearForm();
 
         // RITORNA ALL'HOMEPAGE CON MESSAGGIO DI SUCCESSO        
-        return redirect()->route('homepage')->with('succesMessage', 'Articolo creato con successo!');
+        return redirect()->route('homepage')->with('successCreateMessage', 'Articolo creato con successo!');
     }
 
     // METODO PULIRE I CAMPI DAL FORM 

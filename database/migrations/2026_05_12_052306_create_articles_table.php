@@ -15,7 +15,6 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->text('description');
-            $table->string('img')->nullable();
             $table->float('price', 8, 2);
 
             // RELAZIONE ONE TO MANY CON LA TABELLA CATEGORY

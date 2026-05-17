@@ -10,7 +10,6 @@ class Article extends Model
     protected $fillable = [
         'title',
         'description',
-        'img',
         'price',
         'category_id',
         'user_id'
@@ -30,5 +29,21 @@ class Article extends Model
     public function user(): BelongsTo
     {
     return $this->belongsTo(User::class);
+    }
+
+    // funzione per accettare un articolo o meno
+    public function setAccepted($value){
+        // prendiamo il valore is_accepted è lo valorizziamo con il valore di $value (valore passato dall'utente) e lo salviamo
+        // ritorniamo true ovvero la modifica va a buon fine
+        $this->is_accepted = $value;
+        $this->save();
+        return true;
+    }
+
+    // funzione per conteggio articoli da revisionare
+    public static function toBeRevisedCount(){
+        // prendiamo solo gli articoli con is_accepted = null -> restituziona una collezione
+        // a questa collezione applichiamo la funzione count per contare gli articoli non ancora revisionati
+        return Article::where('is_accepted', null)->count();
     }
 }
