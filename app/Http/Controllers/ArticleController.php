@@ -36,7 +36,7 @@ class ArticleController extends Controller implements HasMiddleware
 
     public function byCategory(Category $category){
         // articles è una variabile che contiene la collezione di articoli che appartengono alla categoria
-         $articles = $category->articles->where('is_accepted', true)->paginate(3);
+         $articles = $category->articles()->where('is_accepted', true)->paginate(3);
         // passami tutti gli articoli che appartengono alla categoria - risultato collezione di articoli (relazione one to many) e la categoria
         return view('article.byCategory', [ 'articles'=>$articles, 'category'=> $category ]);
     }
