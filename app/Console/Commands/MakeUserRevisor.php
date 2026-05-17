@@ -7,10 +7,10 @@ use Illuminate\Console\Attributes\Signature;
 use Illuminate\Console\Command;
 use App\Models\User;
 
-#[Signature('app:make-user-revisor {email}')]
-#[Description('Registra un utente come revisore')]
 class MakeUserRevisor extends Command
 {
+    protected $signature = 'app:make-user-revisor {email}';
+    protected $description = 'Registra un utente come revisore';
     /**
      * Execute the console command.
      */

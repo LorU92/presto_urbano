@@ -68,10 +68,17 @@
                         <form 
                         action="{{route('logout')}}"
                         method="POST">
+                        @csrf
                         <button type="submit" class="nav-link" >LOGOUT</button>
                     </form>
                 </li>
                 @endauth
+                {{-- CERCA --}}
+                {{-- method GET - name='query' - action="rotta" --}}
+                <form class="d-flex" role="search" action="{{route('search.article')}}" method="GET">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="query"/>
+                    <button class="btn btn-outline-success" type="submit">CERCA</button>
+                </form>
             </ul>
         </div>
     </div>

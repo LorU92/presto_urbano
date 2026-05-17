@@ -37,3 +37,6 @@ Route::get('/send-mail', [RevisorController::class, 'becomeRevisor'])->middlewar
 
 // ROTTA MAIL - RENDI REVISORE
 Route::get('/revisor/make/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');
+
+// ROTTA RICERCA
+Route::get('/search', [PublicController::class, 'searchArticles'])->name('search.article');

@@ -10,10 +10,12 @@
     "license": "MIT",
     "require": {
         "php": "^8.3",
-        "laravel/fortify": "^1.36",
-        "laravel/framework": "^13.7",
+        "laravel/fortify": "^1.37",
+        "laravel/framework": "^12",
+        "laravel/scout": "v11.2 as v10.0",
         "laravel/tinker": "^3.0",
-        "livewire/livewire": "^3.0"
+        "livewire/livewire": "^3.0",
+        "teamtnt/laravel-scout-tntsearch-driver": "^15.0"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
