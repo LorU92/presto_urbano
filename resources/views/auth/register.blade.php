@@ -23,29 +23,29 @@
                 action="{{route('register')}}">
                 @csrf
                 <div class="form-group">
-                    <label for="name">Nome Utente</label>
+                    <label for="name">NAME</label>
                     <input type="text" class="form-control" id="name" name="name">
                 </div>
                 <div class="form-group">
-                    <label for="email">Email</label>
+                    <label for="email">EMAIL</label>
                     <input type="email" class="form-control" id="email" name="email">
                 </div>
                 <div class="form-group">
-                    <label for="password">Password</label>
+                    <label for="password">PASSWORD</label>
                     <input type="password" class="form-control" id="password" name="password">
                 </div>
                 <div class="form-group">
-                    <label for="password_confirmation">Confirm Password</label>
+                    <label for="password_confirmation">CONFIRM PASSWORD</label>
                     <input type="password" class="form-control" id="password_confirmation" name="password_confirmation">
                 </div>
                 <div class="d-flex justify-content-center">
                     <div class="col-6">
-                        <button type="submit" class="btn btn-button-custom form-label-custom">REGISTRATI</button>
+                        <button type="submit" class="btn btn-button-custom form-label-custom">{{__('ui.register')}}</button>
                     </div>
                 </div>
                 <div class="col-6">
-                    <p class="btn btn-link">Hai già un account? 
-                        <a href="{{ route('login') }}">Accedi</a>
+                    <p class="btn btn-link">{{__('ui.haveAccount')}}
+                        <a href="{{ route('login') }}">{{__('ui.login')}}</a>
                     </p>
                 </div>
             </div>

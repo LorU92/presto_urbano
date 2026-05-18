@@ -33,9 +33,9 @@
             <div class="col-12 col-md-6 col-mb-3 py-5 ">
                 <h2 class="display-5"><span class="titleevento">{{$article->title}}</span></h2>
                 <div class="d-flex justify-content-center flex-column">
-                    <h3 class="">PREZZO</h3>
+                    <h3 class="">{{__('ui.price')}}</h3>
                     <h2 class="">{{$article->price}} €</h2>
-                    <h3 class="">DESCRIZIONE</h3>
+                    <h3 class="">{{__('ui.description')}}</h3>
                     <p class="sottotitleevento">{{$article->description}}</p>
                 </div>
             </div>

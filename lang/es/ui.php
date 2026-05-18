@@ -32,6 +32,35 @@ return[
     'contact' => 'CONTACTO',
     'becomeRevisor' => 'ÚNETE A NUESTRO EQUIPO. HAZTE REVISOR',
     'applyRevisor' => 'HAZ TU SOLICITUD HACIENDO CLIC EN EL BOTÓN DE ABAJO',
-    'buttonRevisor' => 'ENVIAR SOLICITUD'
+    'buttonRevisor' => 'ENVIAR SOLICITUD',
+
+// CARD ARTICLE
+    'showAll' => 'LEE TODOS',
+
+// CARD BYCATEGORY
+    'publishArticle' => 'PUBLICAR ARTÍCULO',
+
+// SEARCH
+    'searchResults' => 'RESULTADOS DE LA BÚSQUEDA',
+    'noResults' => 'NO HAY RESULTADOS PARA TU BÚSQUEDA',
+
+// SHOW
+    'price' => 'PRECIO',
+    'description' => 'DESCRIPCION',
+
+// FORM ARTICLE
+    'titleArticle' => 'TÍTULO ARTÍCULO',
+    'selectCategory' => 'SELECCIONA CATEGORIA',
+
+// REGISTRATI / LOGIN 
+    'login' => 'ACCEDER',
+    'haveAccount' => '¿TIENES UNA CUENTA?',
+    'noAccount' => '¿NO TIENES UNA CUENTA?',
+
+// REVISORE
+    'accept' => 'ACCEPTAR',
+    'reject' => 'RECHAZAR',
+    'noArticlestoReview' => 'NO HAY ARTÍCULOS PARA REVISAR',
+    'author' => 'AUTOR'
 
 ];

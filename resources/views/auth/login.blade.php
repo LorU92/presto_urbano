@@ -23,7 +23,7 @@
                 action="{{route('login')}}">
                     @csrf
                     <div class="mb-3">
-                        <label for="email" class="form-label">Email</label>
+                        <label for="email" class="form-label">EMAIL</label>
                         <input type="email" class="form-control" id="email" aria-describedby="emailHelp"  name="email">
                     </div>
                     <div class="mb-3">
@@ -33,6 +33,11 @@
                     <div class="d-flex justify-content-center">
                         <button type="submit" class="btn btn-button-custom form-label-custom">ACCEDI</button>
                     </div>
+                     <div class="col-6">
+                    <p class="btn btn-link">{{__('ui.noAccount')}} </br>
+                        <a href="{{ route('register') }}">{{__('ui.register')}}</a>
+                    </p>
+                </div>
                 </div>
             </form>
         </div>

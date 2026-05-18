@@ -32,6 +32,35 @@ return[
     'contact' => 'CONCTACT',
     'becomeRevisor' => 'JOIN OUR REVIEW TEAM',
     'applyRevisor' => 'APPLY BY CLICKING THE BUTTON BELOW',
-    'buttonRevisor' => 'SUBMIT APPLICATION'
+    'buttonRevisor' => 'SUBMIT APPLICATION',
+   
+// CARD ARTICLE
+    'showAll' => 'SHOW ALL',
+
+// CARD BYCATEGORY
+    'publishArticle' => 'PUBLISH ARTICLE',
+
+// SEARCH
+    'searchResults' => 'SEARCH RESULTS',
+    'noResults' => 'NO RESULTS',
+
+// SHOW
+    'price' => 'PRICE',
+    'description' => 'DESCRIPTION',
+
+// FORM ARTICLE
+    'titleArticle' => 'TITLE ARTICLE',
+    'selectCategory' => 'CHOOSE CATEGORY',
+
+// REGISTRATI / LOGIN 
+    'login' => 'LOGIN',
+    'haveAccount' => 'YOU ALREADY HAVE AN ACCOUNT?',
+    'noAccount' => 'DO YOU NOT HAVE AN ACCOUNT?',
+
+// REVISORE
+    'accept' => 'ACCEPT',
+    'reject' => 'REJECT',
+    'noArticlestoReview' => 'NO ARTICLES TO REVIEW',
+    'author' => 'AUTHOR'
 
 ];

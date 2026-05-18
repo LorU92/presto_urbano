@@ -17,7 +17,7 @@
                     wire:submit.prevent="store">
                     @csrf
                     <div class="mb-3">
-                        <label for="title" class="form-label form-label-custom">TITOLO ANNUNCIO</label>
+                        <label for="title" class="form-label form-label-custom">{{__('ui.titleArticle')}}</label>
                         <input type="text" class="form-control form-control-custom" id="title" wire:model.debounce.150ms="title">
 
                         {{-- MESSAGGIO DI ERRORE di validazione - Livewire --}}
@@ -28,7 +28,7 @@
 
                     </div>
                     <div class="mb-3">
-                        <label for="description" class="form-label form-label-custom">DESCRIZIONE</label>
+                        <label for="description" class="form-label form-label-custom">{{__('ui.description')}}</label>
                         <textarea class="form-control form-control-custom" id="description" cols="30" rows="10" wire:model.debounce.150ms="description"></textarea>
 
                         {{-- MESSAGGIO DI ERRORE di validazione - Livewire --}}
@@ -39,7 +39,7 @@
                             
                     </div>
                     <div class="mb-3">
-                        <label for="price" class="form-label form-label-custom">PREZZO</label>
+                        <label for="price" class="form-label form-label-custom">{{__('ui.price')}}</label>
                         <input type="text" class="form-control form-control-custom" id="price" wire:model.debounce.150ms="price">
 
                         {{-- MESSAGGIO DI ERRORE di validazione - Livewire --}}
@@ -51,15 +51,15 @@
                     </div>
                     <div class="mb-3">
                         <select wire:model="category" id="category" class="form-control form-control-custom">
-                            <option label>SELEZIONA CATEGORIA</option>
+                            <option label>{{__('ui.selectCategory')}}</option>
                             @foreach ($categories as $category)
-                                <option class="text-uppercase" value="{{$category->id}}">{{$category->name}}</option>
+                                <option class="text-uppercase" value="{{$category->id}}">{{__("ui.$category->name")}}</option>
                             @endforeach
                         </select>
                     </div>
                     
                     <div class="d-flex justify-content-center">
-                        <button type="submit" class="btn btn-button-custom form-label-custom">CARICA ANNUNCIO</button>
+                        <button type="submit" class="btn btn-button-custom form-label-custom">{{__('ui.publishArticle')}}</button>
                     </div>
                 </div>
             </form>

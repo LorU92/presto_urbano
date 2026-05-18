@@ -2,7 +2,7 @@
 
     <!-- section annunci -->
     <section class="container-fluid">
-        <h1 class="evento-custom">PUBBLICA/ARTICOLO</h1>
+        <h1 class="evento-custom">{{__('ui.writeArticles')}}</h1>
         <!-- annunci row -->
         <div class="linea"></div>
 

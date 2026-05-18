@@ -2,7 +2,7 @@
 
     <!-- section annunci -->
     <section class="container-fluid">
-        <h1 class="evento-custom">RISULTATI RICERCA <span>"{{$query}}"</span></h1>
+        <h1 class="evento-custom">{{__('ui.searchResults')}} <span>"{{$query}}"</span></h1>
         <!-- annunci row -->
         <div class="linea"></div>
 
@@ -18,7 +18,7 @@
                     </div>       
                     <div class="d-flex justify-content-center align-items-center flex-column">
                         <div>
-                            <h3 class="text-center sottotitleevento">NESSUN ARTICOLO TROVATO</h3>
+                            <h3 class="text-center sottotitleevento">{{__('ui.noResults')}}</h3>
                         </div>
                     </div>
                     @endforelse
