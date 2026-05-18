@@ -23,7 +23,6 @@ class IsRevisor
         }
         return redirect()->route('homepage')->with('errorMessage', 'Zona riservata ai revisori');
 
-
         }
         
 }

@@ -2,7 +2,7 @@
 
     <!-- section annunci -->
     <section class="container-fluid">
-        <h1 class="evento-custom">IN EVIDENZA</h1>
+        <h1 class="evento-custom">{{__('ui.featuredAds')}}</h1>
         <!-- annunci row -->
         <div class="row">
 
@@ -38,7 +38,7 @@
             @empty
                 <div class="row">
                     <div class="col-12">
-                        <h3 class="text-center sottotitleevento">ANCORA NESSUN ARTICOLO? </br> Non ti preoccupare arriveranno presto!</h3>
+                        <h3 class="text-center sottotitleevento">{{__('ui.noArticlesyet')}} </br>{{__('ui.dontWorry')}}</h3>
                     </div>
                 </div>
             @endforelse
