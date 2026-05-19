@@ -28,7 +28,7 @@ a{
 .nav-link{
     font-size: 12px;
     font-weight: 500;
-    width: 120px;
+    width: 150px;
 }
 
 .navbar-icon-custom{
@@ -464,3 +464,12 @@ h4{
     color: var(--pink);
 }
 
+/* FORM */
+.img-preview{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+}

@@ -1,3 +1,4 @@
+{{-- footer --}}
 <footer class="cointainer-fluid">
         <div class="row footer-row">
             <div class="col-12 col-md-6">

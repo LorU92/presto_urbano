@@ -31,6 +31,12 @@ class CreateArticleForm extends Component
 
     public $category;
     public $article;
+
+    // IMMAGINI
+    // VariabilE in cui vengono salvate le immagini del form
+    public $images = [];
+    // Variabile in cui vengono salvate le immagini temporaneamente
+    public $temporary_images = [];
     
     // STORE
     public function store(){
@@ -42,13 +48,26 @@ class CreateArticleForm extends Component
         // MASS ASSIGNMENT
         // permette di creare un nuovo articolo e salvare i dati nel database in un'unica riga di codice, specificando i campi da salvare e i valori corrispondenti recuperati dalle proprietà del componente da assegnare ai dati del model
 
-          Article::create([
+          $this->article = Article::create([
             'title' => $this->title,
             'description' => $this->description,
             'price' => $this->price,
             'category_id' => $this->category,
             'user_id' => Auth::user()->id
         ]);
+
+        // IMMAGINI
+        // se ci sono immagini nel form > 0
+        // per ogni immagine in images, creiamo un oggetto di classe Image e lo salviamo nel database (storage/app/public/images)
+        if (count($this->images) > 0) {
+            foreach ($this->images as $image) {
+                $this->article->images()->create(['path' => $image->store('images', 'public')]);
+            }
+        }
+        
+        foreach ($this->images as $image) {
+            
+        }
 
         // METODO RESETTARE I CAMPI DEL FORM
         // dopo aver salvato i dati nel database, pulisco i campi del form richiamando il metodo clearForm (creato da me), in modo da avere i campi vuoti per poter inserire un nuovo articolo
@@ -67,6 +86,31 @@ class CreateArticleForm extends Component
         $this->description = '';
         $this->price = '';
         $this->category = '';
+        $this->images = [];
+    }
+
+    // METODO UPDATE TEMPORARY IMAGES
+    public function updatedTemporaryImages()
+    {
+        // se i dati del form sono validi salva le immagini temporaneamente in un array temporary_images con peso massimo e massimo numero foto
+        if ($this->validate([
+            'temporary_images.*' => 'image|max:1024',
+            'temporary_images' => 'max:6'
+        ])){
+        // per ogni image temporanea in temporary_images, la aggiungo all'array images
+        foreach ($this->temporary_images as $image) {
+            $this->images[] = $image;
+            }
+        }
+    }
+
+    // METODO DELETE IMAGE
+    public function removeImage($key)
+    {
+        // rimuovo l'immagine dall'array images
+        if(in_array($key, array_keys($this->images))){
+            unset($this->images[$key]);
+        }
     }
 
     public function render()

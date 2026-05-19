@@ -1,11 +1,11 @@
 <x-layout>
 
-    <!-- section annunci -->
+    <!-- creare articolo -->
     <section class="container-fluid">
         <h1 class="evento-custom">{{__('ui.writeArticles')}}</h1>
-        <!-- annunci row -->
         <div class="linea"></div>
 
+            {{-- component livewire - creazione articolo --}}
             <livewire:create-article-form />
                
     </section>

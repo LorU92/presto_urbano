@@ -4,7 +4,7 @@
     <section class="container-fluid">
         <h1 class="evento-custom">ACCEDI</h1>
         <div class="linea"></div>
-        <!-- REGISTRATI -->
+        <!-- LOGIN -->
         <div class="row justify-content-center">
             <div class="col-12 col-md-4">
 
@@ -22,22 +22,30 @@
                 method="POST" 
                 action="{{route('login')}}">
                     @csrf
+
+                    {{-- input email --}}
                     <div class="mb-3">
                         <label for="email" class="form-label">EMAIL</label>
                         <input type="email" class="form-control" id="email" aria-describedby="emailHelp"  name="email">
                     </div>
+
+                    {{-- input password --}}
                     <div class="mb-3">
                         <label for="password" class="form-label">PASSWORD</label>
                         <input type="password" class="form-control" id="password" name="password">
                     </div>
+
+                    {{-- tasto accedi --}}
                     <div class="d-flex justify-content-center">
-                        <button type="submit" class="btn btn-button-custom form-label-custom">ACCEDI</button>
+                        <button type="submit" class="btn btn-button-custom form-label-custom">{{__('ui.login')}}</button>
                     </div>
-                     <div class="col-6">
-                    <p class="btn btn-link">{{__('ui.noAccount')}} </br>
+
+                    {{-- tasto rimando registrazione --}}
+                    <div class="col-6">
+                        <p class="btn btn-link">{{__('ui.noAccount')}} </br>
                         <a href="{{ route('register') }}">{{__('ui.register')}}</a>
-                    </p>
-                </div>
+                        </p>
+                    </div>
                 </div>
             </form>
         </div>

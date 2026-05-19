@@ -5,6 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Laravel\Scout\Searchable;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use App\Models\Image;
 
 class Article extends Model
 {
@@ -34,6 +36,17 @@ class Article extends Model
     {
     return $this->belongsTo(User::class);
     }
+
+    // RELAZIONE ONE TO MANY
+    // funzione di relazione tra tabelle
+    // un articolo ha molti immagini
+    public function images(): HasMany
+    {
+    return $this->hasMany(Image::class);
+    }
+
+
+
 
     // FUNZIONE ACCETTARE O MENO ARTICOLO
     // funzione per accettare un articolo o meno

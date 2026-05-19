@@ -1,17 +1,18 @@
 <x-layout>
 
-    <!-- section annunci -->
+    <!-- cerca articoli -->
     <section class="container-fluid">
         <h1 class="evento-custom">{{__('ui.searchResults')}} <span>"{{$query}}"</span></h1>
-        <!-- annunci row -->
         <div class="linea"></div>
 
+            {{-- card articoli --}}
             @forelse ($articles as $article)
                 <div class="container-fluid">
                     <div class="row">
                         <x-card :article="$article" />
                     </div>
                     @empty
+                    {{-- messaggio se non ci sono articoli --}}
                     <div class="row">
                         <div class="col-12">
                         </div>
@@ -22,15 +23,17 @@
                         </div>
                     </div>
                     @endforelse
-                </div>       
+                </div>
+
+        {{-- metodo per generare le pagine da selezionare  --}}
         <div class="d-flex justify-content-center">
             <div>
-                {{-- metodo per generare le pagine da selezionare  --}}
                 {{$articles->links()}}
             </div>
         </div>
 
     </section>
+    
     <!-- footer -->
     <x-footer></x-footer>
         

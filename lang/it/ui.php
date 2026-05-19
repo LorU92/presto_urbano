@@ -51,6 +51,7 @@ return[
 // FORM ARTICLE
     'titleArticle' => 'TITOLO ARTICOLO',
     'selectCategory' => 'SELEZIONA CATEGORIA',
+    'uploadImage' => 'CARICA IMMAGINE',
 
 // REGISTRATI / LOGIN 
     'login' => 'ACCEDI',

@@ -51,6 +51,7 @@ return[
 // FORM ARTICLE
     'titleArticle' => 'TITLE ARTICLE',
     'selectCategory' => 'CHOOSE CATEGORY',
+    'uploadImage' => 'UPLOAD IMAGE',
 
 // REGISTRATI / LOGIN 
     'login' => 'LOGIN',

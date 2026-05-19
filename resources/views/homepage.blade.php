@@ -29,6 +29,7 @@
             
             <div class="linea"></div>
 
+            {{-- messaggio se non ci sono articoli --}}
                 @forelse ($articles as $article)
                 <div class="container">
                     <div class="row">
